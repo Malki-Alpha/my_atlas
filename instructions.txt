@@ -1,0 +1,8 @@
+I want to build a chatbot app with multiple capabilities:
+- RAG based, capable of searching for similar matching queried text in knowledge base and augment it, it should use semantic and keyword based retrieval plus reranking. : I suggest to used an API for embedding and local milvus db. What do you think?
+- Inference using OpenAI APIs, use cheapest text and vision models (one for text and one for images). I can provide API token at .env file;
+- Ingestion using text extraction from multiple documents and store it in ext/raw_text in json format including content and metadata (path, type, version, date of cration and date of modification, page). 1 json file per page, named after document name and page number.
+- cleaning the text and storing it in chunks in folder (ext/cleaned_chunks) as json with content and metadata. Chunks size parametrable in .env;
+- For scanned PDF I want to extract text using OCR and layout detection tools (I was thinking of using PaddleOCR), store raw extraction in ext/raw_text, then proceed with cleaning and storing the chunks in folder (ext/cleaned_chunks) as mentioned earlier.
+- I want after embedding and just before insertion to the vectore db to store all embedded chunks in ext/emb_chunks as Json with ocntent, metadata and embedding.
+- I want the chatbot to evaluate the answer it gets from first inference and check if it answers the original query, if yes provide the answer, if not tell no answer found and provide generic answer using bare API inference without grounding data indicating it is not for sure up to date information.

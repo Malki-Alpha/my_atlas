@@ -1,0 +1,37 @@
+# Core
+python-dotenv==1.0.0
+click==8.1.7
+pydantic==2.5.0
+python-json-logger==2.0.7
+
+# Document Processing
+PyMuPDF==1.23.8
+python-docx==1.1.0
+paddleocr==2.7.3
+# For CUDA 11.8, install with: pip install paddlepaddle-gpu==3.2.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu118/
+# For CPU or macOS, install with: pip install paddlepaddle==3.2.0
+
+# Text Processing
+langchain==0.1.0
+langchain-text-splitters==0.0.1
+tiktoken==0.5.2
+nltk==3.8.1
+rank-bm25==0.2.2
+
+# Embeddings
+voyageai==0.2.0
+
+# Vector Database
+pymilvus==2.3.4
+
+# Reranking
+transformers==4.36.0
+torch==2.1.2
+sentencepiece==0.1.99
+
+# LLM
+openai==1.6.1
+
+# Utilities
+tqdm==4.66.1
+requests==2.31.0
