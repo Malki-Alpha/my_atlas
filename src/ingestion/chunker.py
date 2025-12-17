@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from typing import List, Dict, Any
 import tiktoken
-from langchain.text_splitters import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from ..utils.config import config
 from ..utils.logger import get_logger
 
